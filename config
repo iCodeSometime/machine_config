@@ -2,7 +2,7 @@
 
 source functions.sh
 
-echo Warning: This will delete your current .zshrc and replace it with a symbolic link to the one in this repo.
+echo "Warning: This will delete your current .zshrc and replace it with a symbolic link to the one in this repo."
 offer_escape
 rm ~/.zshrc > /dev/null 2> /dev/null
 ln -s "$(pwd)/.zshrc" ~/.zshrc
