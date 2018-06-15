@@ -99,4 +99,4 @@ export EDITOR=emacs
 alias e=$EDITOR
 
 # Personal Functions
-alias zshrc="e ~/.zshrc && pushd $0 && git commit -am 'automated commit' && git push && popd"
+alias zshrc="e ~/.zshrc && source ~/.zshrc && pushd `dirname $(readlink ~/.zshrc)` && git commit -am 'automated commit' && git push && popd"
