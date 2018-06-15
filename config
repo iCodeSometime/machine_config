@@ -1,9 +1,10 @@
-#! /bin/sh
+#! /bin/bash
 
-source functions.sh
+config_dir=$(dirname $(realpath $0))
+zsh_config=$config_dir/zsh_config.sh
 
-echo "Warning: This will delete your current .zshrc and replace it with a symbolic link to the one in this repo."
-offer_escape
-rm ~/.zshrc > /dev/null 2> /dev/null
-ln -s "$(pwd)/.zshrc" ~/.zshrc
-alert_status $? 'linking .zshrc'
+echo "Appending repo config to .zshrc"
+echo $zsh_config > ~/.machine_config_location
+echo "source $zsh_config" >> ~/.zshrc
+echo "Running config to add commands to current shell"
+source $zsh_config
