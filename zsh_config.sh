@@ -25,7 +25,6 @@ function zshrc {
   e $config_location
   source $config_location
   pushd $(dirname $config_location) > /dev/null
-  git  commit -am 'automated commit'
-  git push
+  gpush 'automated commit'
   popd > /dev/null
 }
