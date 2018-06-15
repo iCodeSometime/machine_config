@@ -104,3 +104,7 @@ function mkcd () {
   mkdir $1;
   cd $1
 }
+function gpush () {
+  git commit -am $1
+  git push
+}
