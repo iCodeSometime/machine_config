@@ -97,6 +97,10 @@ export EDITOR=emacs
 
 # Personal aliases
 alias e=$EDITOR
+alias zshrc="e ~/.zshrc && source ~/.zshrc && pushd `dirname $(readlink ~/.zshrc)` && git commit -am 'automated commit' && git push && popd"
 
 # Personal Functions
-alias zshrc="e ~/.zshrc && source ~/.zshrc && pushd `dirname $(readlink ~/.zshrc)` && git commit -am 'automated commit' && git push && popd"
+function mkcd () {
+  mkdir $1;
+  cd $1
+}
