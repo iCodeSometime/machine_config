@@ -1,10 +1,10 @@
 #! /bin/bash
 
 config_dir=$(dirname $(realpath $0))
-zsh_config=$config_dir/zsh_config.sh
+zsh_config=$config_dir/global_config.sh
 
 echo "Appending repo config to .zshrc"
 echo $zsh_config > ~/.machine_config_location
 echo "source $zsh_config" >> ~/.zshrc
 echo "Running config to add commands to current shell"
-source $zsh_config
+exec $SHELL
