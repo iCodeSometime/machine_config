@@ -21,6 +21,6 @@ The config script deletes the current `.zshrc` (prompting first) and creates a s
 ### zshrc
 This holds the oh-my-zsh settings, as well as a few custom settings and aliases
 1. Set `$EDITOR` to emacs.
-2. Create an alias `e` that refers to emacs.
+2. Create an alias `e` that refers to the default editor ($EDITOR).
 3. Create an alias `zshrc` that opens .zshrc in the default editor. Once the editor closes, it reloads `.zshrc` in the open terminal and pushes the changes to `origin/master` with the commit message 'automated commit'
 4. Create a function `mkcd` that creates the given directory and then moves into it. (`mkdir test && cd test`)
