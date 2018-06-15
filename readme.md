@@ -1,4 +1,4 @@
-# Machine Config
+ # Machine Config
 This is my personal machine configuration. Feel free to use it if you want; just make sure you fork this repo
 and clone your fork, since a portion of this automates pushing config changes to origin/master - that needs to refer to your fork.
 
