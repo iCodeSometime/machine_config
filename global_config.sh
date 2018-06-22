@@ -13,7 +13,7 @@ alias e=$VISUAL
 
 # Personal Functions
 function mkcd () {
-  mkdir $1;
+  mkdir $1
   cd $1
 }
 
@@ -22,10 +22,20 @@ function gpush () {
   git push
 }
 
-function zshrc {
-  e $config_location
+function pushrc {
   source $config_location
   pushd $(dirname $config_location) > /dev/null
   gpush 'automated commit'
   popd > /dev/null
 }
+
+function editrc {
+  e $config_location
+  pushrc  
+}
+
+function addrc {
+  echo "$(!!)" > $config_location
+  pushrc
+}
+    
