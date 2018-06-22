@@ -6,9 +6,10 @@ set -o noclobber
 
 # Set default Editor
 export EDITOR=emacs
+export VISUAL=$EDITOR
 
 # Personal aliases
-alias e=$EDITOR
+alias e=$VISUAL
 
 # Personal Functions
 function mkcd () {
