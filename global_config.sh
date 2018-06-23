@@ -1,5 +1,6 @@
 # Setup
 config_location=$(cat ~/.machine_config_location)
+config_dir=$(dirname config_location)
 
 # Settings
 set -o noclobber
@@ -16,26 +17,8 @@ function mkcd () {
   mkdir $1
   cd $1
 }
+# Add convenience commands for git.
+source $config_dir/git.sh
 
-function gpush () {
-  git commit -am $1
-  git push
-}
-
-function pushrc {
-  source $config_location
-  pushd $(dirname $config_location) > /dev/null
-  gpush 'automated commit'
-  popd > /dev/null
-}
-
-function editrc {
-  e $config_location
-  pushrc  
-}
-
-function addrc {
-  echo "$(!!)" > $config_location
-  pushrc
-}
-    
+# Add convenience commands for editing machine_config.
+source $config_dir/config_editing.sh
