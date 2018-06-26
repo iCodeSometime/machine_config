@@ -22,3 +22,5 @@ source $config_dir/git.sh
 
 # Add convenience commands for editing machine_config.
 source $config_dir/config_editing.sh
+
+pullrc
