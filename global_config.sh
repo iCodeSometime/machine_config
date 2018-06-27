@@ -1,9 +1,10 @@
 # Setup
 config_location=$(cat ~/.machine_config_location)
-config_dir=$(dirname config_location)
+config_dir=$(dirname $config_location)
 
 # Settings
 set -o noclobber
+unsetopt autopushdx
 
 # Set default Editor
 export EDITOR=emacs
@@ -17,6 +18,7 @@ function mkcd () {
   mkdir $1
   cd $1
 }
+
 # Add convenience commands for git.
 source $config_dir/git.sh
 
