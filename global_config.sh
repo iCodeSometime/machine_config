@@ -4,7 +4,7 @@ config_dir=$(dirname $config_location)
 
 # Settings
 set -o noclobber
-unsetopt autopushdx
+unsetopt autopushd
 
 # Set default Editor
 export EDITOR=emacs
