@@ -12,7 +12,7 @@ export VISUAL=$EDITOR
 
 # Personal aliases
 alias e=$VISUAL
-alias sudo='sudo -H'
+alias sudo='sudo -H '
 
 # Personal Functions
 function mkcd () {
