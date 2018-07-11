@@ -1,10 +1,25 @@
 # This file defines various convenience commands for editing the machine_config
 
+function confDir {
+  pushd $(dirname $config_location) > /dev/null
+}
+
+function restoreDir {
+    popd > /dev/null
+}
+
+function pullrc {
+  confDir
+  git pull origin master
+  restoreDir
+}
+
 function pushrc {
   source $config_location
-  pushd $(dirname $config_location) > /dev/null
+  pullrc  
+  confDir
   gpush 'automated commit'
-  popd > /dev/null
+  restoreDir
 }
 
 function editrc {
@@ -15,4 +30,8 @@ function editrc {
 function addrc {
   echo "$(!!)" > $config_location
   pushrc
+}
+
+function pullrc {
+  pushd $(dirname $config_location) > /dev/null
 }
