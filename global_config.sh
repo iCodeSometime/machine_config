@@ -9,6 +9,7 @@ unsetopt autopushd
 # Set default Editor
 export EDITOR=emacs
 export VISUAL=$EDITOR
+export LESS="-F -X $LESS"
 
 # Personal aliases
 alias e=$VISUAL
