@@ -16,4 +16,3 @@ function addrc {
   echo "$(!!)" > $config_location
   pushrc
 }
-    
