@@ -22,3 +22,7 @@ function new_git () {
   
 }
 alias git=new_git
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
