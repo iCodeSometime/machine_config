@@ -23,6 +23,6 @@ function new_git () {
 }
 alias git=new_git
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f $config_dir/.git-completion.bash ]; then
+  . $config_dir/git-completion.bash
 fi
