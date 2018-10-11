@@ -14,8 +14,6 @@ function new_git () {
   old_git=$(whence -p git)  
   if [ "$cmd" '==' "log" ]; then
     $old_git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  elif [ "$cmd" '==' "rm" ]; then
-    $old_git rm --cached
   else
     $old_git "$@"
   fi

@@ -17,8 +17,7 @@ alias sudo='sudo -H '
 
 # Personal Functions
 function mkcd () {
-  mkdir $1
-  cd $1
+    mkdir $1 &&  cd $1
 }
 
 # Add convenience commands for git.
