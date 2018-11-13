@@ -11,6 +11,9 @@ export EDITOR=emacs
 export VISUAL=$EDITOR
 export LESS="-F -X $LESS"
 
+# Path
+export PATH=/usr/local/sbin:$PATH
+
 # Personal aliases
 alias e=$VISUAL
 alias sudo='sudo -H '
