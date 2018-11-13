@@ -13,6 +13,7 @@ export LESS="-F -X $LESS"
 
 # Path
 export PATH=/usr/local/sbin:$PATH
+export PATH=/opt/metasploit-framework/bin:$PATH
 
 # Personal aliases
 alias e=$VISUAL
