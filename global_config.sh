@@ -10,6 +10,8 @@ unsetopt autopushd
 export EDITOR=emacs
 export VISUAL=$EDITOR
 export LESS="-F -X $LESS"
+export dev_env=true
+export DATABASE_URL=postgres://localhost
 
 # Path
 export PATH=/usr/local/sbin:$PATH
@@ -22,6 +24,10 @@ alias sudo='sudo -H '
 # Personal Functions
 function mkcd () {
     mkdir $1 &&  cd $1
+}
+
+function cleare() {
+    rm **/*~
 }
 
 # Add convenience commands for git.
