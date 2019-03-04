@@ -7,20 +7,6 @@ function gpush () {
   git push
 }
 
-# Allows overriding git commands.
-# Git aliases are not flexible enough to do what I want.
-function new_git () {
-  cmd=$1
-  old_git=$(whence -p git)  
-  if [ "$cmd" '==' "log" ]; then
-    $old_git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  else
-    $old_git "$@"
-  fi
-  
-}
-alias git=new_git
-
-if [ -f $config_dir/.git-completion.bash ]; then
-  . $config_dir/git-completion.bash
+if [ -f $config_dir/.git-completion.sh ]; then
+  . $config_dir/git-completion.sh
 fi
