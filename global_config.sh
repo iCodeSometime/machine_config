@@ -2,6 +2,9 @@
 config_location=$(cat ~/.machine_config_location)
 config_dir=$(dirname $config_location)
 
+# Fix GPG
+export GPG_TTY=$(tty)
+
 # Settings
 set -o noclobber
 unsetopt autopushd
@@ -17,17 +20,14 @@ export DATABASE_URL=postgres://localhost
 export PATH=/usr/local/sbin:$PATH
 export PATH=/opt/metasploit-framework/bin:$PATH
 
-# Personal aliases
+# Aliases
 alias e=$VISUAL
 alias sudo='sudo -H '
+alias cleard='rm -rf * '
 
-# Personal Functions
+# Small Functions
 function mkcd () {
-    mkdir $1 &&  cd $1
-}
-
-function cleare() {
-    rm **/*~
+    mkdir $1 && cd $1
 }
 
 # Add convenience commands for git.

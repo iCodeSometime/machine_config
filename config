@@ -7,5 +7,5 @@ echo "Appending repo config to .zshrc"
 echo $config > ~/.machine_config_location
 echo "source $config" >> ~/.zshrc
 
-echo "Running config to add commands to current shell"
-exec $SHELL
+echo "Importing Config into current shell"
+source $config
