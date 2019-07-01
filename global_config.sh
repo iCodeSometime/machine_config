@@ -22,7 +22,7 @@ export PATH=/opt/metasploit-framework/bin:$PATH
 
 # Aliases
 alias e=$VISUAL
-alias sudo='sudo -H '
+alias sudo='sudo -H -E '
 alias cleard='rm -rf * '
 
 # Small Functions
