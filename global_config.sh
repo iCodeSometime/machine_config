@@ -17,8 +17,9 @@ export dev_env=true
 export DATABASE_URL=postgres://localhost
 
 # Path
-export PATH=/usr/local/sbin:$PATH
-export PATH=/opt/metasploit-framework/bin:$PATH
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/opt/metasploit-framework/bin
+export PATH=$PATH:~/programming/libsource/flutter/bin
 
 # Aliases
 alias e=$VISUAL
