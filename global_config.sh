@@ -25,6 +25,7 @@ export PATH=$PATH:~/programming/libsource/flutter/bin
 alias e=$VISUAL
 alias sudo='sudo -H -E '
 alias cleard='rm -rf * '
+alias nuget='mono ~/bin/mono/nuget.exe '
 
 # Small Functions
 function mkcd () {
