@@ -26,10 +26,19 @@ alias e=$VISUAL
 alias sudo='sudo -H -E '
 alias cleard='rm -rf * '
 alias nuget='mono ~/bin/mono/nuget.exe '
+alias arg_last='${@:$#}'
+alias arg_all_but_last='${*%${!#}}'
 
 # Small Functions
 function mkcd () {
     mkdir $1 && cd $1
+}
+
+function replace () {
+    TFILE=`mktemp --tmpdir tfile.XXXXX`
+    trap "rm -f $TFILE 0 1 2 3 15"
+    sed arg_all_but_last arg_last > "$TFILE"
+    cat "$TFILE" > arg_last
 }
 
 # Add convenience commands for git.
