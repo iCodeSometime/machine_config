@@ -15,6 +15,7 @@ export VISUAL=$EDITOR
 export LESS="-F -X $LESS"
 export dev_env=true
 export DATABASE_URL=postgres://localhost
+export DOTNET_CLI_TELEMETRY_OPTOUT=true
 
 # Path
 export PATH=$PATH:/usr/local/sbin
