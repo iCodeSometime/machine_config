@@ -8,6 +8,7 @@ export GPG_TTY=$(tty)
 # Settings
 set -o noclobber
 unsetopt autopushd
+unsetopt pushdtohome
 
 # Set default Editor
 export EDITOR=emacs
