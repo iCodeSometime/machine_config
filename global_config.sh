@@ -20,6 +20,7 @@ export DATABASE_URL=postgres://localhost
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/opt/metasploit-framework/bin
 export PATH=$PATH:~/programming/libsource/flutter/bin
+export PATH=~/bin:$PATH
 
 # Aliases
 alias e=$VISUAL
